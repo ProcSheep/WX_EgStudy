@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "wordItem": "../../components/wordItem/wordItem",
+    "noData": "../../components/noData/noData",
+    "auth": "/components/auth/auth"
+  }
+}

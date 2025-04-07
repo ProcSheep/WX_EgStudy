@@ -1,0 +1,75 @@
+/* pages/detail-word-v2/detail-word-v2.wxss */
+page{
+  font-size: 30rpx;
+}
+
+
+.itemHead{
+  color: gray;
+  margin: 15rpx 0;
+}
+
+.examFrom{
+  color: gray;
+  font-size: 24rpx;
+}
+
+.nextIcon{
+  position: fixed;
+  right: 30rpx;
+  top: 30rpx;
+}
+
+/* wxss代码 */
+.word-info-container {
+  padding: 20rpx;
+}
+
+.info-section {
+  margin-bottom: 30rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgb(248, 10, 10);
+  margin-bottom: 10rpx;
+}
+
+.section-content {
+  font-size: 30rpx;
+  color: #666;
+}
+
+.rel-word-item {
+  margin-bottom: 10rpx;
+  /* font-weight: 900; */
+}
+
+.divider {
+  height: 5px;
+  background-color: rgb(187, 187, 187);
+  margin: 15rpx 0;
+}
+
+/* .phrase-scroll {
+  height: 200rpx;
+  overflow-y: scroll;
+} */
+
+.phrase-item {
+  margin-bottom: 10rpx;
+}
+
+.extension-item {
+  margin-bottom: 10rpx;
+}
+
+.exam-item {
+  margin-bottom: 10rpx;
+}
+
+.exam-from {
+  font-size: 24rpx;
+  color: #999;
+}

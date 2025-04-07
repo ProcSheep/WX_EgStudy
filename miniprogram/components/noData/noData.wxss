@@ -1,0 +1,16 @@
+/* components/noData/noData.wxss */
+.content{
+  margin: 300rpx auto;
+}
+
+.content .image{
+  text-align: center;
+  margin-left: 50rpx ;
+}
+
+.content .text{
+  text-align: center;
+  font-size: large;
+  font-weight: 900;
+  margin: 15rpx;
+}

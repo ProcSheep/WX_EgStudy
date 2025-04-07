@@ -1,0 +1,9 @@
+function formatWordPhone(str){
+  var arr = []
+  arr = str.split(", ")
+  return arr[0] 
+}
+
+module.exports = {
+  formatWordPhone: formatWordPhone
+}

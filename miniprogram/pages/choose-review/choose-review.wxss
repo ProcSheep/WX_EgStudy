@@ -1,0 +1,32 @@
+page{
+  background: linear-gradient(to bottom, #C9D6FF, #E2E2E2);
+}
+/* 页面容器样式，让整体内容居中 */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 单词分类容器样式 */
+.word-category-container {
+  width: 80%;
+  max-width: 400px; /* 最大宽度限制 */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff; /* 容器背景颜色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 容器边框阴影 */
+}
+
+/* 每个单词分类项的样式 */
+.word-category-item {
+  padding: 15px 20px;
+  margin: 10px 0;
+  background-color: #e0f7fa; /* 分类项背景颜色 */
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  color: #00838f; /* 分类项文本颜色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 分类项边框阴影 */
+}

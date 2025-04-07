@@ -1,0 +1,13 @@
+function formatWordItem(arr){
+  var newArr = []
+  // 整理数据 只能用ES5
+  arr.forEach(function(item){
+    newArr.push(item.pos + " " + item.tran)
+  })
+
+  return newArr 
+}
+
+module.exports = {
+  formatWordItem: formatWordItem
+}

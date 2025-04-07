@@ -1,0 +1,36 @@
+/* pages/word-review/word-review.wxss */
+page{
+  padding: 0 44rpx;
+  /* 必要的,别忘了 */
+  box-sizing: border-box;
+}
+
+.head{
+  font-size: large;
+  font-weight: 700;
+  margin: 0rpx 0rpx 20rpx 0rpx;
+}
+
+.wordBack{
+  background: linear-gradient(to right, #B2FEFA, #6190E8); /* 渐变背景 */
+  border-radius: 5%;
+}
+
+.rWord{
+  margin: 20rpx 0rpx;
+  /* background-color: rgb(219, 224, 224); */
+  padding: 10rpx;
+  border-radius: 5%;
+  position: relative;
+}
+
+.review{
+  position: absolute;
+  top: calc(50% - 20rpx);
+  right: 8rpx;
+}
+
+view{
+  padding: 5rpx;
+  font-size: 28rpx;
+}

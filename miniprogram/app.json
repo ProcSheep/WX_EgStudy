@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/main-index/main-index",
+    "pages/login/login",
+    "pages/main-home/main-home",
+    "pages/userInfo/userInfo",
+    "pages/book-menu/book-menu",
+    "pages/word-list/word-list",
+    "pages/detail-word-v1/detail-word-v1",
+    "pages/detail-word-v2/detail-word-v2",
+    "pages/testIndex/test",
+    "pages/wordRecord/wordRecord",
+    "pages/word-review/word-review",
+    "pages/choose-review/choose-review",
+    "pages/review-list/review-list",
+    "pages/collect/collect",
+    "pages/statement/statement",
+    "pages/detail-word-v3/detail-word-v3"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "英语词典",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#1afa29",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/main-index/main-index",
+        "text": "主页",
+        "iconPath": "/image/main-index/首页(未选中)2c2c2c.png",
+        "selectedIconPath": "/image/main-index/首页(选中)1afa29.png"
+      },
+      {
+        "pagePath": "pages/main-home/main-home",
+        "text": "我的",
+        "iconPath": "/image/main-index/我 的 (未选中).png",
+        "selectedIconPath": "/image/main-index/我 的 (选中).png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

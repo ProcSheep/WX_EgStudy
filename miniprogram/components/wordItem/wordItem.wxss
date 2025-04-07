@@ -1,0 +1,40 @@
+/* components/wordItem/wordItem.wxss */
+.wordItem{
+  display: flex;
+  height: 100rpx;
+}
+
+.index{
+  width: 60rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.wordArea{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meaning{
+  width: 320rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.delete{
+  width: 70rpx;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

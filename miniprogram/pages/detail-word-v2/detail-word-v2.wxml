@@ -1,0 +1,101 @@
+<wxs src="/utils/wordPhone.wxs" module="fmt"/>
+<!-- 直接跳转下一个单词 -->
+<van-icon class="nextIcon" color="#ee0a24" size="2em" name="share-o" bind:tap="onNextWord" />
+
+<view class="wordInfo">
+  <view style="font-size: 55rpx; color: orangered;">{{currentWordInfo.speech}}</view>
+  <!-- <view>星星收藏: 后续这个功能对应着star进入收藏夹的功能</view> -->
+  <view wx:if="{{currentWordInfo.phone}}" style="font-size: 35rpx; color: gray; ">/{{fmt.formatWordPhone(currentWordInfo.phone)}}/</view>
+  <block wx:for="{{trans}}" wx:key="pos">
+    <text> {{item.pos}} {{item.tranCn}};</text>
+  </block>
+</view>
+
+<!-- 分割线 -->
+<view class="divider"></view>
+
+<!-- wxml代码 -->
+<view class="word-info-container">
+  <!-- 记忆技巧 -->
+  <view class="info-section">
+    <view class="section-title">--记忆技巧--</view>
+    <view class="section-content">{{remMethod || '无'}}</view>
+  </view>
+
+  <!-- 同根 relativeWords -->
+  <view class="info-section">
+    <view class="section-title">--词型拓展--</view>
+    <view class="section-content">
+      <view wx:if="{{relWord.length}}">
+        <block wx:for="{{relWord}}" wx:key="pos">
+          <view class="rel-word-item" style="color: black; font-weight: 700;">词性: {{item.pos}}</view>    
+          <block wx:for="{{item.words}}" wx:for-item="data" wx:key="hwd">
+            <view class="rel-word-item"><text style="color: rgb(245, 106, 106);">{{data.hwd}}</text> {{data.tran}}</view>      
+          </block>
+        </block>
+      </view>
+      <view class="info-section" wx:else>
+        <!-- 当没有数据时，不显示整个模块的标题和内容，避免空白 -->
+        无
+      </view>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="divider"></view>
+
+  <!-- 短语 -->
+  <view class="info-section">
+    <view class="section-title">--相关短语--</view>
+    <view class="section-content">
+      <scroll-view scroll-y class="phrase-scroll" wx:if="{{phrase.length}}">
+        <block wx:for="{{phrase}}" wx:key="pContent">
+          <view class="phrase-item"><text style="color: rgb(245, 106, 106);">{{item.pContent}}:</text> {{item.pCn}}</view>
+        </block>
+      </scroll-view>
+      <view class="info-section" wx:else>
+        <!-- 当没有数据时，不显示整个模块的标题和内容，避免空白 -->
+        无
+      </view>
+    </view>
+  </view>
+
+  <!-- 意思相近的短语 -->
+  <view class="info-section" wx:if="{{syno.length}}">
+    <view class="section-title">--拓展延伸--</view>
+    <view class="section-content">
+      <block wx:for="{{syno}}" wx:key="pos">
+        <view class="extension-item" style="color: black; font-weight: 600;">第{{index + 1}}条: ({{item.pos}})  {{item.tran}}</view>    
+        <block wx:for="{{item.hwds}}" wx:key="*this" wx:for-item="data" wx:for-index="idx">
+          <view class="extension-item">{{idx + 1}}. {{data.w}}</view>
+        </block>
+      </block>
+    </view>
+  </view>
+  <view class="info-section" wx:else>
+    <!-- 当没有数据时，不显示整个模块的标题和内容，避免空白 -->
+    无
+  </view>
+
+  <!-- 分割线 -->
+  <view class="divider"></view>
+
+  <!-- 真题例句 -->
+  <view class="info-section">
+    <view class="section-title">--真题例句--</view>
+    <view class="section-content">
+      <scroll-view scroll-y class="phrase-scroll" wx:if="{{realExamSentence.length}}">
+        <block wx:for="{{realExamSentence}}" wx:key="sContent">
+          <view class="exam-item">{{item.sContent}}</view>
+          <text class="exam-from">{{item.sourceInfo.year}} {{item.sourceInfo.level}}{{item.sourceInfo.paper}}{{item.sourceInfo.type}}</text>
+        </block>
+      </scroll-view>
+      <view class="info-section" wx:else>
+        <!-- 当没有数据时，不显示整个模块的标题和内容，避免空白 -->
+        无
+      </view>
+    </view>
+  </view>
+</view>
+
+

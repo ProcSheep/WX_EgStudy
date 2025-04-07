@@ -1,0 +1,67 @@
+<!--pages/main-index/main-index.wxml-->
+
+  <view class="header">
+    <text>开启你的学习单词之旅吧~</text>
+    <text style="font-size: 50rpx; margin-top: 20rpx;">欢迎! {{userInfo.nickName || '微信用户'}}</text>
+    <image src="cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/main-index/小狐狸.png" mode=""/>
+  </view>
+
+  <view class="artboard">
+    <view class="wordList" bind:tap="onWordList">单词列表</view>
+    <view class="bookInfo">
+      <text>{{ hasBook ? currentBook.bookName : '请选择一本单词书'}}</text>
+      <view class="swiIcon" bind:tap="onChooseBook">
+        <van-icon name="exchange"/>
+      </view>
+    </view>
+
+    <view class="progress">
+      <text>学习进度条~已学习{{stuWords}}/总词数{{allWords}}</text>
+    
+      <progress 
+        percent="{{percentWord}}"
+        show-info
+      />
+    </view>
+  </view>
+
+
+  <view class="wordPlan">
+    <view class="wordPlanTitle">--每日任务--</view>
+    <view class="wordItem">
+      <text class="wordNum">{{stuWords}}</text>
+      <text>已学单词</text>
+    </view>
+    <view class="wordItem" bind:tap="studyPlan">
+      <text class="wordNum">{{wordNum}}</text>
+      <text>新词数</text>
+    </view>
+    <view class="wordItem">
+      <text class="wordNum">{{reWord}}</text>
+      <text>复习单词</text>
+    </view>
+  </view>
+
+  <van-action-sheet show="{{ show }}" bind:close="onClose" title="每日学习单词数">
+    <van-picker 
+      columns="{{ columns }}" 
+      default-index="{{ wordIndex }}" 
+      bind:change="onChange"
+      confirm-button-text = "确认"
+      />
+  </van-action-sheet>
+
+  <!-- onNextStudy -->
+  <view wx:if="{{wordNum === wordIndex && wordNum.length !== 0 && wordIndex.length !== 0}}"> 
+    <button type="primary" bind:tap="onNextStudy">再来一组</button>
+  </view>
+
+  <view wx:else>
+    <button type="primary" bind:tap="onStudyWords">开始学习</button>
+  </view>
+
+
+
+<!-- <view>
+  <button type="primary" bind:tap="onDestory">onUnload</button>
+</view> -->

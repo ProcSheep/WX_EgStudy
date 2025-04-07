@@ -1,0 +1,31 @@
+/* pages/login/login.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header .logo{
+  margin: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgb(68, 68, 68);
+  
+}
+
+.header .logo image{
+  width: 100%;
+  height: 100%;
+}
+

@@ -1,0 +1,30 @@
+<!--pages/collect/collect.wxml-->
+<!-- <text>pages/collect/collect.wxml</text> -->
+
+<auth>
+  <view class="header">
+   <text>收藏列表</text>
+    <image class="eyePic" bind:tap="isHideWords" src="{{ isEyeShow ? 'cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/word-list/eye_show.png' : 'cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/word-list/eye_hide.png'}}" mode=""/>
+  </view>
+
+  <view wx:if="{{hasBook}}">
+    <block wx:for="{{wordList}}" wx:key="_id">
+      <wordItem
+        itemData="{{item}}"
+        index="{{index+1}}"
+        isEyeShow="{{isShow}}"
+        isCollect="{{true}}"
+        bind:tap="goWordDetailV3"
+        mark:item="{{item}}"
+        bind:delete="deleteWord"
+      />
+    </block>
+  </view>
+
+
+  <view wx:else>
+    <noData>请先选择单词书~</noData>
+  </view>
+</auth>
+
+

@@ -1,0 +1,23 @@
+<!--components/wordItem/wordItem.wxml-->
+<!-- <text>components/wordItem/wordItem.wxml</text> -->
+<wxs src="/utils/wordItem.wxs" module="format"/>
+
+<view class="wordList">
+  <view class="wordItem" bind:tap="goDetailWordV3">
+    <view class="index">{{index}}</view>
+    <view class="wordArea">
+      <view class="word"> 
+        {{itemData.headWord}}
+        <block wx:for="{{fireCount}}" wx:key="*this">
+          <van-icon name="fire-o" color="#ee0a24"/>
+        </block>
+      </view>
+      <view class="meaning" wx:if="{{isEyeShow}}">
+        {{wordMean? format.formatWordItem(wordMean) : '没有词意'}}
+      </view>
+      <view wx:if="{{isCollect}}" class="delete" catch:tap="delete">
+        <image src="cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/collect/删除.png" mode=""/>
+      </view>
+    </view>
+  </view>
+</view>

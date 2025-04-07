@@ -1,0 +1,20 @@
+<!--pages/word-review/word-review.wxml-->
+<!-- <text>pages/word-review/word-review.wxml</text> -->
+
+<auth>
+  <view class="head">学习记录</view>
+    <view class="wordBack" wx:if="{{hasRecord}}">
+    <view class="rWord" wx:for="{{studyRecord}}" wx:key="date" bind:tap="goReview" mark:data="{{item}}">
+      <view>日期: {{item.date}}</view>
+        <block wx:for="{{item.books}}" wx:key="bookName" wx:for-item="data">
+          <view>{{data.bookName}}: {{data.hasStu}}</view>
+        </block>
+      <view class="review">复习一下 >>></view>
+    </view>
+  </view>
+
+  <view wx:else>
+    <noData>还没有学习记录哦~</noData>
+  </view>
+</auth>
+

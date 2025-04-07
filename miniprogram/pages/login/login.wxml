@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<!-- <text>pages/login/login.wxml</text> -->
+<view class="header">
+  <view class="logo">
+    <image src="cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/statement/三花猫.png"/>
+  </view>
+  <text class="appName">智学英语</text>
+</view>
+
+
+<view>
+  <van-button type="primary" round custom-style="width:200px;" bind:click="onLoginClick">一键登录</van-button>
+</view>
+
+
+

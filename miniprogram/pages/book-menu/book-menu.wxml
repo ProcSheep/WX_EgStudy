@@ -1,0 +1,53 @@
+<!--pages/book-menu/book-menu.wxml-->
+<!-- <text>pages/book-menu/book-menu.wxml</text> -->
+<auth>
+  <view class="header">
+    单词书目录
+  </view>
+
+  <view class="book-item" bind:tap="onChooseBook" mark:index="{{1}}">
+    <view class="book-image">
+      <image class="pic" src="cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/book-menu/CET4.jpg" mode="aspectFill" lazy-load/>
+    </view>
+    <view class="book-info">
+      <view class="book-name">
+        大学生英语四级
+        <image class="sel-pic" src="{{bookIndex === 1 ? 'cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/book-menu/选中2.png' : 'cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/book-menu/选中1.png'}}" mode=""/>
+      </view>
+      <!-- <view class="book-progress">
+        <text>学习进度</text>
+        <progress percent="{{percentWord}}" show-info/>
+      </view> -->
+    </view>
+  </view>
+  <view class="book-item" bind:tap="onChooseBook" mark:index="{{2}}">
+    <view class="book-image">
+      <image class="pic" src="cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/book-menu/CET6.jpg" mode="aspectFill" lazy-load/>
+    </view>
+    <view class="book-info">
+      <view class="book-name">
+        大学生英语六级
+        <image class="sel-pic" src="{{bookIndex === 2 ? 'cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/book-menu/选中2.png' : 'cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/book-menu/选中1.png'}}" mode=""/>
+      </view>
+      <!-- <view class="book-progress">
+        <text>学习进度</text>
+        <progress percent="{{percentWord}}" show-info/>
+      </view> -->
+    </view>
+  </view>
+  <view class="book-item" bind:tap="onChooseBook" mark:index="{{3}}">
+    <view class="book-image">
+      <image class="pic" src="cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/book-menu/考研.jpg" mode="aspectFill" lazy-load/>
+    </view>
+    <view class="book-info">
+      <view class="book-name">
+        考研英语
+        <image class="sel-pic" src="{{bookIndex === 3 ? 'cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/book-menu/选中2.png' : 'cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/book-menu/选中1.png'}}" mode=""/>
+      </view>
+      <!-- <view class="book-progress">
+        <text>学习进度</text>
+        <progress percent="{{percentWord}}" show-info/>
+      </view> -->
+    </view>
+  </view>
+</auth>

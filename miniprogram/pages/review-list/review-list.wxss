@@ -1,0 +1,15 @@
+/* pages/review-list/review-list.wxss */
+
+.header{
+  display: flex;
+  align-items: center;
+}
+
+.eyePic{
+  margin-left: 20rpx;
+}
+
+.eyePic{
+  width: 50rpx;
+  height: 50rpx;
+}

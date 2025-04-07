@@ -1,0 +1,9 @@
+<!--pages/choose-review/choose-review.wxml-->
+<!-- <text>pages/choose-review/choose-review.wxml</text> -->
+<view class="page-container">
+  <view class="word-category-container">
+    <view bind:tap="goReviewList1" class="word-category-item">四级单词 >> </view>
+    <view bind:tap="goReviewList2" class="word-category-item">六级单词 >> </view>
+    <view bind:tap="goReviewList3" class="word-category-item">考研单词 >> </view>
+  </view>
+</view>

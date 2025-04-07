@@ -1,0 +1,89 @@
+/* pages/main-index/main-index.wxss */
+
+/* 上 */
+.header{
+  height: 180rpx;
+  border-radius: 10%;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.header image{
+  position: absolute;
+  width: 200rpx;
+  height: 180rpx;
+  right: 0rpx;
+}
+
+/* 中 */
+.artboard{
+  height: 300rpx;
+  margin-top: 24rpx;
+  position: relative;
+  /* background-color: yellow; */
+  background: linear-gradient(to right,#C6FFDD , #f3f9a7);
+  border-radius: 10%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.bookInfo{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.swiIcon{
+  margin-left: 15rpx;
+}
+
+.wordList{
+  width: 200rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 0;
+  background-color: #FBD786;
+  border-radius: 30rpx 0rpx 0rpx 30rpx / 30rpx 0rpx 0rpx 30rpx;
+}
+
+/* 下 */
+.wordPlan{
+  height: 300rpx;
+  position: relative;
+  margin: 24rpx 0;
+  display: flex;
+  /* background-color: aqua; */
+}
+
+.wordPlanTitle{
+  width: 200rpx;
+  height: 50rpx;
+  position: absolute;
+  left: calc(50% - 90rpx);
+  top: 25rpx;
+  font-size: 30rpx;
+  color: #b3aeae;
+}
+
+.wordItem{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wordNum{
+  font-size: 50rpx;
+  font-weight: 700;
+}

@@ -1,0 +1,4 @@
+<!--pages/testIndex/test.wxml-->
+<text>pages/testIndex/test.wxml</text>
+
+<view bind:tap="getInfo">获取信息</view>

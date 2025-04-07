@@ -1,0 +1,12 @@
+<!--components/noData/noData.wxml-->
+<!-- <text>components/noData/noData.wxml</text> -->
+
+<view class="content">
+    <!-- 只使用了一个插槽,也不用命名和配置json -->
+    <view class="text">
+      <slot></slot>
+    </view>
+    <view class="image">
+      <image src="cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/word-list/空空如也.png" mode=""/>
+    </view>
+</view>

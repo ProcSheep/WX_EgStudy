@@ -1,0 +1,23 @@
+<!--pages/userInfo/userInfo.wxml-->
+<!-- <text>pages/userInfo/userInfo.wxml</text> -->
+
+<auth>
+  <button class="avatar-wrapper">
+    <image class="avatar" src="cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/main-home/橘猫.png" mode="aspectFit"></image>
+  </button> 
+
+  <view class="info">
+    <view class="userName">
+      <label for="">用户名: </label>
+      <input type="nickname" class="inputArea" model:value="{{nickName}}" bindinput="onempty" placeholder="请输入昵称" maxlength="8"/>
+    </view>
+
+    <view class="motto">
+      <label for="">个性签名: </label>
+      <input type="text" class="inputArea" model:value="{{motto}}" bindinput="onempty" placeholder="请输入个性签名" maxlength="12"/>
+    </view>
+  </view>
+
+  <button type="primary" bind:tap="onSubmit">提交信息</button>
+</auth>
+

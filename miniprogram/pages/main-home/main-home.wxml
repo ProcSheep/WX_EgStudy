@@ -1,0 +1,30 @@
+<view class="main-container">
+  <view class="user" bind:tap="setUserInfo">
+    <view class="avatar"><image src="cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/main-home/橘猫.png"/></view>
+    <text class="nickname">{{nickName}}</text>
+    <text class="motto">个性签名: {{motto}}</text>
+  </view>
+
+  <view class="studyInfo">
+    <!-- 选择单词的界面 -->
+    <view class="infoItem" bind:tap="goWordBook">
+      <van-icon name="label-o" class="icon"/>
+      <text>单词书</text>
+    </view>
+    <view class="infoItem">
+      <!-- 标志星星的界面 --- 收藏的功能 -->
+      <van-icon name="star-o" class="icon" bind:tap="goCollect"/>
+      <text>我的收藏</text>
+    </view>
+    <!-- 日期 + 复习的单词 -->
+    <view class="infoItem">
+      <van-icon name="failure" class="icon" bind:tap="goRecord"/>
+      <text>学习记录</text>
+    </view>
+    <!-- 关于我们的作者声明 -->
+    <view class="infoItem">
+      <van-icon name="friends-o" class="icon" bind:tap="goUs"/>
+      <text>关于我们</text>
+    </view>
+  </view>
+</view>

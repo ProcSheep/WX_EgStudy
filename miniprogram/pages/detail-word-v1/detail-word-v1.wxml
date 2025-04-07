@@ -1,0 +1,41 @@
+<!--pages/detail-words/detail-words.wxml-->
+<!-- <text>pages/detail-words/detail-words.wxml</text> -->
+
+<wxs src="/utils/wordPhone.wxs" module="fmt"/>
+
+<view class="header">
+  <view> 今日任务: {{wordIndex + 1}}/{{size}} </view> 
+  <view class="right">
+    <text style="margin-right: 10rpx;">是否显示中文</text>
+    <van-switch checked="{{ checked }}" bind:change="onChange" />
+  </view>
+</view>
+<van-progress color="linear-gradient(to right, #ee0979, #ff6a00)" percentage="{{percentage}}"/>
+
+<!-- store控制区,点击下一个不是跳页面,而是从今日单词列表中选出洗一个单词显示,同理详细解释也是 -->
+<view class="content" wx:if="{{currentWordInfo.speech}}">
+  <view class="word">
+    <view class="wordInfo">{{wordList[wordIndex].headWord}}</view>
+    <!-- wxs渲染先于js,所以要等待currentWordInfo数据加载完成后再使用,所以在最外层添加wx:if -->
+    <view>美:/{{fmt.formatWordPhone(currentWordInfo.usphone) || '无'}}/</view>
+    <view>英:/{{fmt.formatWordPhone(currentWordInfo.ukphone) || '无'}}/</view>
+    <view style="margin: 10rpx;"></view>
+    <view wx:if="{{checked}}">{{currentWordInfo.trans[0].tranCn}}</view>
+    <view wx:if="{{!checked}}">......</view>
+    
+    <view wx:if="{{currentWord._id}}">
+      <image src="{{ isCollect ? 'cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/detail-word/收藏 (1).png' : 'cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/detail-word/收藏.png' }}" bind:tap="onCollect"/>
+    </view> 
+  </view>
+
+    
+  <view class="control">
+    <view class="conItem" style="color: red;"  bind:tap="onDetailWords" >详细解释</view>
+    <view wx:if="{{isShow}}" class="conItem" style="color: orange" bind:tap="onNextWord">下一个</view>
+    <view wx:if="{{!isShow}}" class="conItem" style="color: green" bind:tap="onOver">已完成</view>
+  </view>
+</view>
+
+<view wx:else class="content">
+    正在加载中....
+</view>

@@ -1,0 +1,29 @@
+<!-- pages/statement/statement.wxml-->
+<!-- <text>pages/statement/statement.wxml</text> -->
+
+<view class="header">
+  <image src="cloud://learn-cloud-9gr5j1mk6617597b.6c65-learn-cloud-9gr5j1mk6617597b-1333357212/image/statement/三花猫.png" class="avatar"/>
+  <view class="headText">智学单词</view>
+</view>
+
+<view class="horizontal-divider"></view>
+
+<view class="container">
+  <view class="section">
+    <text class="section-title">代码托管地址</text>
+    <view>
+      <text class="section-content">微信托管: <text class="navigator-hover">https://git.weixin.qq.com/ProcSheep/egstudy.git</text></text>
+    </view>
+    <view>
+      <text class="section-content">github: <text class="navigator-hover">https://github.com/ProcSheep/egStudy.git</text></text>
+    </view>
+  </view>
+  <view class="section">
+    <text class="section-title">项目历程</text>
+    <text class="section-content"> 本小程序在学校独立开发完成,历经艰险,边学边做,项目制作前后总耗时1个月,学习基础1个月,在此感谢codewhy老师开源的教程,感激不尽^v^</text>
+  </view>
+  <view class="section">
+    <text class="section-title">声明</text>
+    <text class="section-content"> 本小程序仅供学习使用,不含任何付费项目</text>
+  </view>
+</view>
